@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { db } from "@/firebase";
+import db from "@/firebase.js";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useRouter } from "vue-router";
 
