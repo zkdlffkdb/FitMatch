@@ -1,28 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="home"> Home </router-link>
-    <router-link to="login"> Login </router-link>
-    <router-link to="signup"> SignUp </router-link>
-    <router-link to="profile"> Profile </router-link>
-    <router-link to="matches"> Matches </router-link>
-    <router-link to="messages"> Messages </router-link>
-    <router-link to="map"> Map </router-link>
-    <router-link to="schedule"> Calendar </router-link>
-    <router-link to="rewards"> Rewards </router-link>
-    <router-link to="Leaderboard"> Leaderboard </router-link>
+  <div id="appLayout">
+      <NavBar/>
+      <div id="main">
+        <router-view/>
+      </div>
   </div>
-  <router-view/>
+  
 </template>
 
 <script>
+import NavBar from './components/Navbar.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    NavBar
+  }
 }
 </script>
 
 <style>
-#nav {
+#appLayout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+#main {
+  margin-left: 300px;
+  flex: 1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 </style>
