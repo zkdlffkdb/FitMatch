@@ -1,8 +1,6 @@
 <template>
     <nav id="nav">
         <router-link to="home"> FitMatch </router-link>
-        <router-link to="login"> Login </router-link>
-        <router-link to="signup"> SignUp </router-link>
         <router-link to="profile"> Profile </router-link>
         <router-link to="matches"> Matches </router-link>
         <router-link to="messages"> Messages </router-link>
