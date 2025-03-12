@@ -1,15 +1,28 @@
 <template>
-    <h1>FitMatch Landing</h1>
-    <router-link to="login"> 
-        <button>Login</button> 
-    </router-link>
-    <router-link to="signup">
-        <button>Sign Up</button>
-    </router-link>
+  <div class="landing-container">
+    <TopNavLogin />
+    <LandingMiddle />
+  </div>
 </template>
 
 <script>
+import LandingMiddle from "@/components/LandingMiddle.vue";
+import TopNavLogin from "@/components/TopNavLogin.vue";
+
 export default {
-    name: "Landing"
-}
+  name: "Landing",
+  components: {
+    LandingMiddle,
+    TopNavLogin,
+  },
+};
 </script>
+
+<style scoped>
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #cdc9f3;
+}
+</style>
