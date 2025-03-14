@@ -237,7 +237,6 @@ export default {
           createdAt: new Date(),
         };
         console.log("Attempting to write to Firestore:", userData);
-        // Store user data in Firestore
         await setDoc(doc(db, "users", user.uid), userData);
 
         console.log("User Data Saved in Firestore");

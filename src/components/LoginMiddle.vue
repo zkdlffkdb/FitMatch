@@ -4,8 +4,8 @@
       <h1 class="login-title">Login</h1>
 
       <div class="input-group">
-        <label for="username">Username</label>
-        <input v-model="email" type="text" id="username" class="input-field" />
+        <label for="username">Email</label>
+        <input v-model="email" type="text" id="email" class="input-field" />
       </div>
 
       <div class="input-group">
@@ -56,7 +56,7 @@ export default {
         return;
       }
 
-      const auth = getAuth(); // Get Firebase auth instance
+      const auth = getAuth();
       try {
         const userCredential = await signInWithEmailAndPassword(
           auth,
@@ -65,10 +65,8 @@ export default {
         );
         console.log("User Logged In:", userCredential.user);
 
-        // Redirect user to home page after successful login
         this.$router.push("/home");
       } catch (error) {
-        // Handle Firebase authentication errors with meaningful messages
         this.handleFirebaseError(error);
       }
     },
