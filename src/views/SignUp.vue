@@ -1,9 +1,16 @@
 <template>
-    <h1>This is the SignUp Page</h1>
+  <TopNavLogin />
+  <SignupMiddle />
 </template>
 
 <script>
+import TopNavLogin from "@/components/TopNavLogin.vue";
+import SignupMiddle from "@/components/SignupMiddle.vue";
 export default {
-    name: "SignUp"
-}
+  name: "Signup",
+  components: {
+    SignupMiddle,
+    TopNavLogin,
+  },
+};
 </script>

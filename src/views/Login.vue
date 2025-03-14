@@ -1,9 +1,18 @@
 <template>
-    <h1>This is the Login Page</h1>
+  <div class="login-container">
+    <TopNavLogin />
+    <LoginMiddle />
+  </div>
 </template>
 
 <script>
+import TopNavLogin from "@/components/TopNavLogin.vue";
+import LoginMiddle from "@/components/LoginMiddle.vue";
 export default {
-    name: "Login"
-}
+  name: "Login",
+  components: {
+    LoginMiddle,
+    TopNavLogin,
+  },
+};
 </script>
