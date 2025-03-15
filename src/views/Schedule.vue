@@ -1,9 +1,15 @@
 <template>
-    <h1>This is the Schedule Page</h1>
-</template>
-
-<script>
-export default {
-    name: "Schedule"
-}
-</script>
+    <h1>Schedule</h1>
+    <div>
+      <CalendarComponent />
+    </div>
+  </template>
+  
+  <script>
+  import CalendarComponent from "@/components/CalendarComponent.vue";
+  
+  export default {
+    name: "Schedule",  // ✅ Added missing comma
+    components: { CalendarComponent } // ✅ Properly formatted
+  };
+  </script>
